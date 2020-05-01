@@ -19,7 +19,7 @@ import javax.annotation.Nonnull;
 @Mod.EventBusSubscriber(modid = YourBuddyCal.MOD_ID, bus=Mod.EventBusSubscriber.Bus.MOD)
 public final class YBCEntityTypes
 {
-    public static final EntityType<ClassicCalEntity> ClassicCal = getNull();
+    public static final EntityType<ClassicCalEntity> CLASSIC_CAL = getNull();
 
     @Nonnull
     @SuppressWarnings("ConstantConditions")
@@ -45,4 +45,5 @@ public final class YBCEntityTypes
         EntityType<?> type = builder.build(YourBuddyCal.MOD_ID + ":" + name);
         registry.register(type.setRegistryName(name));
     }
+
 }
