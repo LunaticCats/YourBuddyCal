@@ -6,7 +6,7 @@ import org.apache.logging.log4j.Logger;
 public class Debug
 {
 	
-	public static Logger logger = LogManager.getLogger("Minestuck");
+	public static Logger logger = LogManager.getLogger("YourBuddyCal");
 
 	public static void error(Object text)
 	{
