@@ -33,7 +33,7 @@ public final class YBCEntityTypes
     public static void registerEntities(final RegistryEvent.Register<EntityType<?>> event)
     {
         IForgeRegistry<EntityType<?>> registry = event.getRegistry();
-        register(registry, EntityType.Builder.create(ClassicCalEntity::new, EntityClassification.MONSTER).size(3F, 2F), "Classic Call");
+        register(registry, EntityType.Builder.create(ClassicCalEntity::new, EntityClassification.MONSTER).size(3F, 2F), "classic_cal");
 }
 
     public static void registerPlacements()
