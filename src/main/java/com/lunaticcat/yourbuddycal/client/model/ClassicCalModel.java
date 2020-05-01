@@ -22,7 +22,7 @@ public class ClassicCalModel<T extends ClassicCalEntity> extends EntityModel<T> 
 		textureWidth = 87;
 		textureHeight = 71;
 
-		head = new RendererModel(this);
+		head = new RendererModel(this, 0, 0);
 		head.setRotationPoint(3.0F, 10.0F, 4.0F);
 		setRotation(head, 0.0F, 180.0F, 0.0F);
 		head.cubeList.add(new ModelBox(head, 37, 25, -5.0F, -14.0F, -4.0F, 9, 2, 7, 0.0F, false));
@@ -31,13 +31,13 @@ public class ClassicCalModel<T extends ClassicCalEntity> extends EntityModel<T> 
 		head.cubeList.add(new ModelBox(head, 0, 32, -8.0F, -7.0F, -4.0F, 15, 6, 7, 0.0F, false));
 		head.cubeList.add(new ModelBox(head, 25, 46, -3.0F, -1.0F, -3.0F, 5, 1, 5, 0.0F, false));
 
-		body = new RendererModel(this);
+		body = new RendererModel(this, 0, 10);
 		body.setRotationPoint(2.0F, 24.0F, 6.0F);
 		setRotation(body, 0.0F, 180.0F, 0.0F);
 		body.cubeList.add(new ModelBox(body, 0, 0, -5.0F, -14.0F, -6.0F, 11, 25, 7, 0.0F, false));
 		body.cubeList.add(new ModelBox(body, 62, 25, -4.0F, 11.0F, -4.0F, 9, 3, 3, 0.0F, false));
 
-		rightarm = new RendererModel(this);
+		rightarm = new RendererModel(this, 0, 20);
 		rightarm.setRotationPoint(-5.0F, 12.0F, 4.0F);
 		setRotation(rightarm, 0.0F, 180.0F, 0.0F);
 		rightarm.cubeList.add(new ModelBox(rightarm, 0, 21, -2.0F, -2.0F, -4.0F, 4, 4, 7, 0.0F, false));
@@ -49,7 +49,7 @@ public class ClassicCalModel<T extends ClassicCalEntity> extends EntityModel<T> 
 		rightarm.cubeList.add(new ModelBox(rightarm, 44, 38, 0.0F, 35.0F, -1.0F, 1, 3, 5, 0.0F, false));
 		rightarm.cubeList.add(new ModelBox(rightarm, 56, 38, -1.0F, 34.0F, -1.0F, 1, 3, 5, 0.0F, false));
 
-		leftarm = new RendererModel(this);
+		leftarm = new RendererModel(this, 0, 20);
 		leftarm.setRotationPoint(10.0F, 12.0F, 3.0F);
 		setRotation(leftarm, 0.0F, 180.0F, 0.0F);
 		leftarm.cubeList.add(new ModelBox(leftarm, 0, 21, -2.0F, -2.0F, -4.0F, 4, 4, 7, 0.0F, false));
@@ -61,7 +61,7 @@ public class ClassicCalModel<T extends ClassicCalEntity> extends EntityModel<T> 
 		leftarm.cubeList.add(new ModelBox(leftarm, 68, 43, 0.0F, 35.0F, -5.0F, 1, 3, 5, 0.0F, false));
 		leftarm.cubeList.add(new ModelBox(leftarm, 76, 48, -1.0F, 34.0F, -5.0F, 1, 3, 5, 0.0F, false));
 
-		leftleg = new RendererModel(this);
+		leftleg = new RendererModel(this, 4, 20);
 		leftleg.setRotationPoint(5.0F, 27.0F, 3.0F);
 		setRotation(leftleg, 0.0F, 180.0F, 0.0F);
 		leftleg.cubeList.add(new ModelBox(leftleg, 56, 0, -2.0F, 11.0F, -2.0F, 2, 11, 3, 0.0F, false));
