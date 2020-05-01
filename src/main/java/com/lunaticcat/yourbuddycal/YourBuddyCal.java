@@ -1,5 +1,8 @@
 package com.lunaticcat.yourbuddycal;
 
+import com.lunaticcat.yourbuddycal.client.ClientProxy;
+import com.lunaticcat.yourbuddycal.entity.YBCEntityTypes;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -21,13 +24,16 @@ public class YourBuddyCal {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::serverSetup);
     }
 
-    private void setup(final FMLCommonSetupEvent event){
-        LOGGER.info("YourBuddyCal setup");
-    }
-    private void clientSetup(final FMLClientSetupEvent event){
-        LOGGER.info("YourBuddyCal client setup");
+    private void setup(final FMLCommonSetupEvent event)
+    {
+        YBCEntityTypes.registerPlacements();
     }
     private void serverSetup(final FMLDedicatedServerSetupEvent event){
         LOGGER.info("YourBuddyCal server setup");
+    }
+
+    private void clientSetup(final FMLClientSetupEvent event)
+    {
+        ClientProxy.init();
     }
 }
