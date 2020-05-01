@@ -87,7 +87,7 @@ public class ClassicCalModel<T extends ClassicCalEntity> extends EntityModel<T> 
 	@Override
 	public void render(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch, float scale) {
 
-		scale*=1.5F;
+		scale*=5F;
 		GL11.glTranslatef(0F, -0.8F, 0F);
 
 		setRotationAngles(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch, scale);
