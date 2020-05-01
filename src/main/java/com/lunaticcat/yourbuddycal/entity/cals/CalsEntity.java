@@ -4,7 +4,6 @@ import com.lunaticcat.yourbuddycal.entity.EntityListFilter;
 import com.lunaticcat.yourbuddycal.entity.YourBuddyCalEntity;
 import com.lunaticcat.yourbuddycal.player.IdentifierHandler;
 import com.lunaticcat.yourbuddycal.player.PlayerIdentifier;
-import com.lunaticcat.yourbuddycal.util.Debug;
 import com.lunaticcat.yourbuddycal.util.YBCTags;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.goal.*;
@@ -13,6 +12,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -82,6 +82,14 @@ public abstract class CalsEntity extends YourBuddyCalEntity implements IMob
 	public boolean attackEntityAsMob(Entity entityIn)
 	{
 		return entityIn.attackEntityFrom(DamageSource.causeMobDamage(this), (float) this.getAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).getValue());
+	}
+
+	@Override
+	protected ResourceLocation createTexture()
+	{
+		ResourceLocation calsName = Objects.requireNonNull(getType().getRegistryName(), () -> "Getting texture for entity without a registry name! "+this);
+
+		return new ResourceLocation(calsName.getNamespace(), String.format("textures/entity/%s_%s.png", calsName.getPath()));
 	}
 	
 	private double randX()
