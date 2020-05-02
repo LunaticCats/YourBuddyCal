@@ -90,7 +90,7 @@ public class ClassicCalModel<T extends ClassicCalEntity> extends EntityModel<T> 
 
 		rightleg1 = new RendererModel(this);
 		rightleg1.setRotationPoint(5.0F, 38.0F, 4.0F);
-		setRotation(rightleg1, 0.0F, 180.0F, 0.0F);
+		setRotation(rightleg1, 0.0F, 0.0F, 0.0F);
 		rightleg1.setTextureOffset(56, 0).addBox(-1.0F, 0.0F, -2.0F, 2, 11, 3, 0.0F, false);
 
 		rightleg2 = new RendererModel(this);
