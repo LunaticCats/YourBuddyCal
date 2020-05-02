@@ -13,7 +13,7 @@ public class ClientProxy
 
     public static void init()
     {
-        RenderingRegistry.registerEntityRenderingHandler(ClassicCalEntity.class, manager -> new YourBuddyCalEntityRenderer<>(manager, new ClassicCalModel<>(), 2.8F));
+        RenderingRegistry.registerEntityRenderingHandler(ClassicCalEntity.class, manager -> new YourBuddyCalEntityRenderer<>(manager, new ClassicCalModel<>(), 0.5F));
         RenderingRegistry.registerEntityRenderingHandler(CalsPartEntity.class, manager -> new ShadowRenderer<>(manager, 1F));
         YBCKeyHandler.registerKeys();
     }

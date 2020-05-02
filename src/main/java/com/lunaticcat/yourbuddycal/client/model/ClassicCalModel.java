@@ -43,12 +43,14 @@ public class ClassicCalModel<T extends ClassicCalEntity> extends EntityModel<T> 
 
 		rightarm1 = new RendererModel(this);
 		rightarm1.setRotationPoint(7.0F, 12.0F, 3.0F);
+		setRotation(rightarm1, 0.0F, 0.0F, 0.0F);
 		rightarm1.setTextureOffset(0, 21).addBox(0.0F, -2.0F, -3.0F, 4, 4, 7, 0.0F, false);
 		rightarm1.setTextureOffset(0, 20).addBox(1.0F, 2.0F, -3.0F, 4, 5, 7, 0.0F, false);
 		rightarm1.setTextureOffset(46, 0).addBox(2.0F, 7.0F, -1.0F, 2, 11, 3, 0.0F, false);
 
 		rightarm2 = new RendererModel(this);
 		rightarm2.setRotationPoint(10.0F, 30.0F, 4.0F);
+		setRotation(rightarm2, 0.0F, 0.0F, 0.0F);
 		rightarm2.setTextureOffset(76, 48).addBox(-1.0F, 16.0F, -1.0F, 1, 3, 5, 0.0F, false);
 		rightarm2.setTextureOffset(68, 43).addBox(-2.0F, 17.0F, -1.0F, 1, 3, 5, 0.0F, false);
 		rightarm2.setTextureOffset(59, 46).addBox(0.0F, 16.0F, -1.0F, 2, 6, 5, 0.0F, false);
@@ -57,12 +59,14 @@ public class ClassicCalModel<T extends ClassicCalEntity> extends EntityModel<T> 
 
 		leftarm1 = new RendererModel(this);
 		leftarm1.setRotationPoint(-4.0F, 12.0F, 4.0F);
+		setRotation(leftarm1, 0.0F, 0.0F, 0.0F);
 		leftarm1.setTextureOffset(0, 21).addBox(-4.0F, -2.0F, -4.0F, 4, 4, 7, 0.0F, false);
 		leftarm1.setTextureOffset(0, 20).addBox(-5.0F, 2.0F, -4.0F, 4, 5, 7, 0.0F, false);
 		leftarm1.setTextureOffset(36, 0).addBox(-4.0F, 7.0F, -2.0F, 2, 11, 3, 0.0F, false);
 
 		leftarm2 = new RendererModel(this);
 		leftarm2.setRotationPoint(-7.0F, 30.0F, 4.0F);
+		setRotation(leftarm2, 0.0F, 0.0F, 0.0F);
 		leftarm2.setTextureOffset(36, 14).addBox(-1.0F, 0.0F, -1.0F, 2, 8, 3, 0.0F, false);
 		leftarm2.setTextureOffset(46, 14).addBox(-1.0F, 8.0F, 0.0F, 2, 8, 3, 0.0F, false);
 		leftarm2.setTextureOffset(45, 46).addBox(-2.0F, 16.0F, -1.0F, 2, 6, 5, 0.0F, false);
@@ -71,10 +75,12 @@ public class ClassicCalModel<T extends ClassicCalEntity> extends EntityModel<T> 
 
 		leftleg1 = new RendererModel(this);
 		leftleg1.setRotationPoint(-2.0F, 38.0F, 4.0F);
+		setRotation(leftleg1, 0.0F, 0.0F, 0.0F);
 		leftleg1.setTextureOffset(66, 0).addBox(-1.0F, 0.0F, -2.0F, 2, 11, 3, 0.0F, false);
 
 		leftleg2 = new RendererModel(this);
 		leftleg2.setRotationPoint(-2.0F, 49.0F, 4.0F);
+		setRotation(leftleg2, 0.0F, 0.0F, 0.0F);
 		leftleg2.setTextureOffset(76, 14).addBox(-1.0F, 0.0F, -1.0F, 2, 8, 3, 0.0F, false);
 		leftleg2.setTextureOffset(76, 3).addBox(-1.0F, 8.0F, 0.0F, 2, 8, 3, 0.0F, false);
 		leftleg2.setTextureOffset(16, 63).addBox(-2.0F, 16.0F, -1.0F, 4, 1, 5, 0.0F, false);
@@ -84,10 +90,12 @@ public class ClassicCalModel<T extends ClassicCalEntity> extends EntityModel<T> 
 
 		rightleg1 = new RendererModel(this);
 		rightleg1.setRotationPoint(5.0F, 38.0F, 4.0F);
+		setRotation(rightleg1, 0.0F, 180.0F, 0.0F);
 		rightleg1.setTextureOffset(56, 0).addBox(-1.0F, 0.0F, -2.0F, 2, 11, 3, 0.0F, false);
 
 		rightleg2 = new RendererModel(this);
 		rightleg2.setRotationPoint(5.0F, 49.0F, 4.0F);
+		setRotation(rightleg2, 0.0F, 0.0F, 0.0F);
 		rightleg2.setTextureOffset(0, 57).addBox(-2.0F, 18.0F, 3.0F, 4, 1, 4, 0.0F, false);
 		rightleg2.setTextureOffset(69, 31).addBox(-1.0F, 0.0F, -1.0F, 2, 8, 3, 0.0F, false);
 		rightleg2.setTextureOffset(79, 31).addBox(-1.0F, 8.0F, 0.0F, 2, 8, 3, 0.0F, false);
@@ -100,7 +108,7 @@ public class ClassicCalModel<T extends ClassicCalEntity> extends EntityModel<T> 
 	public void render(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch, float scale) {
 
 		scale*=0.65F;
-		GL11.glTranslatef(0F, -1.30F, 0F);
+		GL11.glTranslatef(0F, -1.30F, -0.25F);
 
 		setRotationAngles(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch, scale);
 		head.render(scale);
