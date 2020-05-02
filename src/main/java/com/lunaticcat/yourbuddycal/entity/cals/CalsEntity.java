@@ -91,7 +91,7 @@ public abstract class CalsEntity extends YourBuddyCalEntity implements IMob
 	{
 		ResourceLocation calsName = Objects.requireNonNull(getType().getRegistryName(), () -> "Getting texture for entity without a registry name! "+this);
 
-		return new ResourceLocation(calsName.getNamespace(), String.format("textures/entity/%s_%s.png", calsName.getPath()));
+		return new ResourceLocation(calsName.getNamespace(), String.format("textures/entity/%s.png", calsName.getPath()));
 	}
 	
 	private double randX()
