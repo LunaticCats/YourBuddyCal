@@ -108,7 +108,8 @@ public class ClassicCalModel<T extends ClassicCalEntity> extends EntityModel<T> 
 	public void render(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch, float scale) {
 
 		scale*=0.65F;
-		GL11.glTranslatef(0F, -1.30F, -0.25F);
+		GL11.glTranslatef(0.05F, -1.30F, 0.25F);
+		GL11.glRotatef(180,0,90,0);
 
 		setRotationAngles(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch, scale);
 		head.render(scale);
