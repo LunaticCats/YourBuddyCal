@@ -17,7 +17,6 @@ import java.util.List;
 public class YBCSoundEvents
 {
 	public static final SoundEvent ENTITY_CAL_HURT = getNull();
-	public static final SoundEvent ENTITY_CAL_HIT = getNull();
 	public static final SoundEvent ENTITY_CAL_AMBIANT = getNull();
 	public static final SoundEvent ENTITY_CAL_DEATH = getNull();
 
@@ -32,7 +31,7 @@ public class YBCSoundEvents
 	public static void registerSound(final RegistryEvent.Register<SoundEvent> event)
 	{
 		List<String> paths = Lists.newArrayList(
-				"cal.hurt", "cal.hit", "cal.ambiant", "cal.death");
+				"entity.cal.hurt", "entity.cal.hit", "entity.cal.ambiant", "entity.cal.death");
 		
 		for(String path : paths)
 		{

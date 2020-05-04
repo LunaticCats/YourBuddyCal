@@ -1,0 +1,24 @@
+{
+  "entity.cal.ambient": {
+    "category": "hostile",
+    "subtitle": "subtitles.entity.yourbuddycal.cal.ambient",
+    "sounds": [
+      "yourbuddycal:mob/cal/ambient"
+    ]
+  },
+"entity.cal.hurt": {
+"category": "hostile",
+"subtitle": "subtitles.entity.yourbuddycal.cal.hurt",
+"sounds": [
+  "yourbuddycal:mob/cal/hurt_1",
+  "yourbuddycal:mob/cal/hurt_2"
+]
+},
+"entity.cal.death": {
+"category": "hostile",
+"subtitle": "subtitles.entity.yourbuddycal.cal.death",
+"sounds": [
+"yourbuddycal:mob/cal/death"
+]
+}
+}
