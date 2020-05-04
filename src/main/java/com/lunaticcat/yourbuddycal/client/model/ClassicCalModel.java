@@ -6,7 +6,6 @@ package com.lunaticcat.yourbuddycal.client.model;
 import com.lunaticcat.yourbuddycal.entity.cals.ClassicCalEntity;
 import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.entity.model.RendererModel;
-import net.minecraft.client.renderer.model.ModelBox;
 import net.minecraft.util.math.MathHelper;
 import org.lwjgl.opengl.GL11;
 
