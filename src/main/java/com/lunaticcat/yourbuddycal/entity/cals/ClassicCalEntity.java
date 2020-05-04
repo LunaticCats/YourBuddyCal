@@ -1,17 +1,17 @@
 package com.lunaticcat.yourbuddycal.entity.cals;
 
+import com.lunaticcat.yourbuddycal.entity.EntityListFilter;
 import com.lunaticcat.yourbuddycal.util.YBCSoundEvents;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityPredicate;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.goal.*;
-import net.minecraft.entity.monster.EndermanEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.DamageSource;
-import net.minecraft.util.Direction;
 import net.minecraft.util.SoundEvent;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+
+import java.util.ArrayList;
 
 public class ClassicCalEntity extends CalsEntity
 {
@@ -19,9 +19,11 @@ public class ClassicCalEntity extends CalsEntity
     {
         super(type, world);
     }
-    @Override
 
+    @Override
     protected void registerGoals() {
+        attackEntitySelector = new EntityListFilter(new ArrayList<>());
+        attackEntitySelector.entityList.add(EntityType.PLAYER);
         this.goalSelector.addGoal(0, new SwimGoal(this));
         this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.0D, false));
         this.goalSelector.addGoal(7, new WaterAvoidingRandomWalkingGoal(this, 1.0D, 0.0F));
@@ -30,7 +32,6 @@ public class ClassicCalEntity extends CalsEntity
         this.targetSelector.addGoal(2, new HurtByTargetGoal(this));
         this.targetSelector.addGoal(1, new ClassicCalEntity.FindPlayerGoal(this));
     }
-
     static class FindPlayerGoal extends NearestAttackableTargetGoal<PlayerEntity> {
         private final CalsEntity cal;
         private PlayerEntity player;
