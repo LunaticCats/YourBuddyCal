@@ -23,7 +23,7 @@ public class ClassicCalModel<T extends ClassicCalEntity> extends EntityModel<T> 
 	private final RendererModel leftleg2;
 
 	public ClassicCalModel() {
-		textureWidth = 87;
+		textureWidth = 89;
 		textureHeight = 71;
 
 		head = new RendererModel(this, 0, 0);
