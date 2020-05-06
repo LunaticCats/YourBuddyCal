@@ -29,7 +29,6 @@ import java.util.*;
 public abstract class CalsEntity extends YourBuddyCalEntity implements IMob {
 	protected EntityListFilter attackEntitySelector;    //TODO this filter isn't being saved. F1X PLZ
 	protected boolean fromSpawner;
-	public boolean dropCandy;
 	private int targetChangeTime;
 	private static final float maxSharedProgress = 2;    //The multiplier for the maximum amount progress that can be gathered from each enemy with the group fight bonus
 
@@ -43,7 +42,6 @@ public abstract class CalsEntity extends YourBuddyCalEntity implements IMob {
 	protected void registerAttributes() {
 		super.registerAttributes();
 		this.getAttributes().registerAttribute(SharedMonsterAttributes.ATTACK_DAMAGE);
-
 		this.getAttribute(SharedMonsterAttributes.KNOCKBACK_RESISTANCE).setBaseValue(this.getKnockbackResistance());
 		this.getAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(this.getWanderSpeed());
 	}
