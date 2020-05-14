@@ -5,24 +5,18 @@ import com.lunaticcat.yourbuddycal.entity.YourBuddyCalEntity;
 import com.lunaticcat.yourbuddycal.player.IdentifierHandler;
 import com.lunaticcat.yourbuddycal.player.PlayerIdentifier;
 import com.lunaticcat.yourbuddycal.util.YBCTags;
-import net.minecraft.block.Blocks;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.monster.IMob;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
-import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompoundNBT;
-import net.minecraft.particles.ParticleTypes;
 import net.minecraft.util.*;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
-import net.minecraft.world.Difficulty;
-import net.minecraft.world.IWorld;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.Constants;
 
-import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import java.util.*;
 
@@ -155,6 +149,7 @@ public abstract class CalsEntity extends YourBuddyCalEntity implements IMob {
 			totalModifier += modifiers[i];
 		}
 	}
+
 //enderman code
 boolean shouldAttackPlayer(PlayerEntity player) {
 		Vec3d vec3d = player.getLook(1.0F).normalize();

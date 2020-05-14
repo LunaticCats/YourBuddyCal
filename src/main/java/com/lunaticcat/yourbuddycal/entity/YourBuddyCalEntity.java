@@ -16,7 +16,7 @@ public abstract class YourBuddyCalEntity extends CreatureEntity
 	{
 		super(type, world);
 	}
-	
+
 	@Override
 	protected void registerAttributes()
 	{
@@ -25,7 +25,8 @@ public abstract class YourBuddyCalEntity extends CreatureEntity
 	}
 	
 	protected abstract float getMaximumHealth();
-	
+
+
 	protected ResourceLocation createTexture()
 	{
 		ResourceLocation entityName = Objects.requireNonNull(getType().getRegistryName(), () -> "Getting texture for entity without a registry name! "+this);
@@ -39,7 +40,6 @@ public abstract class YourBuddyCalEntity extends CreatureEntity
 			textureResource = createTexture();
 		return textureResource;
 	}
-	
 	protected void clearTexture()
 	{
 		textureResource = null;

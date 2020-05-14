@@ -3,9 +3,7 @@ import com.lunaticcat.yourbuddycal.client.model.*;
 import com.lunaticcat.yourbuddycal.client.renderer.entity.ShadowRenderer;
 import com.lunaticcat.yourbuddycal.client.renderer.entity.YourBuddyCalEntityRenderer;
 import com.lunaticcat.yourbuddycal.client.settings.YBCKeyHandler;
-import com.lunaticcat.yourbuddycal.entity.EntityBigPart;
 import com.lunaticcat.yourbuddycal.entity.cals.*;
-import net.minecraft.client.renderer.entity.model.BipedModel;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 
 public class ClientProxy
